@@ -66,7 +66,7 @@ function Run()
             [14] = { ["name"] = "Prince Taldaram",              ["coorX"] = "29,6",     ["coorY"] = "62,2", ["day"] =  12, ["hour"] = 22, ["min"] = 0},
             [15] = { ["name"] = "Elder Nadox",                  ["coorX"] = "44,2",     ["coorY"] = "49,1", ["day"] =  12, ["hour"] = 22, ["min"] = 20},
             [16] = { ["name"] = "Noth the Plaguebringer",       ["coorX"] = "31,6",     ["coorY"] = "70,5", ["day"] =  12, ["hour"] = 22, ["min"] = 40},
-            [17] = { ["name"] = "Patchwerk",                    ["coorX"] = "36,5",     ["coorY"] = "67,4", ["day"] =  12, ["hour"] = 23, ["min"] = 0},
+            [17] = { ["name"] = "Patchwerk (in cave)",          ["coorX"] = "34,4",     ["coorY"] = "68,3", ["day"] =  12, ["hour"] = 23, ["min"] = 0},
             [18] = { ["name"] = "Blood Queen Lana'thel",        ["coorX"] = "49,7",     ["coorY"] = "32,7", ["day"] =  12, ["hour"] = 23, ["min"] = 20},
             [19] = { ["name"] = "Professor Putricide",          ["coorX"] = "57,1",     ["coorY"] = "30,3", ["day"] =  12, ["hour"] = 23, ["min"] = 40},
             [20] = { ["name"] = "Lady Deathwhisper",            ["coorX"] = "51,1",     ["coorY"] = "78,5", ["day"] =  13, ["hour"] = 0, ["min"] = 0}
