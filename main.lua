@@ -69,7 +69,7 @@ function Run()
             [17] = { ["name"] = "Patchwerk (in cave)",          ["coorX"] = "34,4",     ["coorY"] = "68,3", ["day"] =  12, ["hour"] = 23, ["min"] = 0},
             [18] = { ["name"] = "Blood Queen Lana'thel",        ["coorX"] = "49,7",     ["coorY"] = "32,7", ["day"] =  12, ["hour"] = 23, ["min"] = 20},
             [19] = { ["name"] = "Professor Putricide",          ["coorX"] = "57,1",     ["coorY"] = "30,3", ["day"] =  12, ["hour"] = 23, ["min"] = 40},
-            [20] = { ["name"] = "Lady Deathwhisper",            ["coorX"] = "51,1",     ["coorY"] = "78,5", ["day"] =  13, ["hour"] = 0, ["min"] = 0}
+            [20] = { ["name"] = "Lady Deathwhisper",            ["coorX"] = "51,1",     ["coorY"] = "78,5", ["day"] =  13, ["hour"] = 0,  ["min"] = 0}
         };
 
 
