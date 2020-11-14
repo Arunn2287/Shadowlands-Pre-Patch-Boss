@@ -1,0 +1,6 @@
+## Interface: 40300
+## Title: |cff1784d1Shadowlends Pre Patch Boss|r
+## Author: Cryptó
+## Version: 1.0.0
+
+main.lua
