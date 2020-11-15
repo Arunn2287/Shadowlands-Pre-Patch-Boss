@@ -79,7 +79,7 @@ function Run()
         local bossMin = item.min;
         local found = false;
 
-        for i = 1, 10 do
+        for i = 1, 100 do
             bossMin = bossMin + timeSpanMin
             bossHour = bossHour + timeSpanHour
 
@@ -92,7 +92,6 @@ function Run()
                 bossDay = bossDay + 1
             end
             bossTimeInMin = (bossDay*60*60) + (bossHour*60) + bossMin
-
             if (bossTimeInMin - currentTimeInMin <= 20 and bossTimeInMin - currentTimeInMin >= 0) then
                 found = true
                 break
