@@ -90,7 +90,7 @@ function Run()
                 bossDay = bossDay + 1
             end
             bossTimeInMin = (bossDay*60*60) + (bossHour*60) + bossMin
-            if (bossTimeInMin - currentTimeInMin <= 20 and bossTimeInMin - currentTimeInMin >= 0) then
+            if (bossTimeInMin - currentTimeInMin <= 10 and bossTimeInMin - currentTimeInMin >= 0) then
                 found = true
                 break
             end
