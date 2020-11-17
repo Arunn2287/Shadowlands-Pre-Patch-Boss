@@ -1,4 +1,4 @@
-# Shadowlands-Pre-Patch-Boss
+# Shadowlands-Pre-Patch-Boss EU
 
 
 This is a little addon for the world boss in Icecrown during pre patch.
