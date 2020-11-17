@@ -44,7 +44,9 @@ function Run()
     local timeSpanMin = 20;
     local baseDay = 12;
 
-    local hour, minute = GetGameTime()
+    --local hour, minute = GetGameTime()
+    local hour = date("%H")
+    local minute = date("%M")
     local day = date("%d")
     local currentTimeInMin = (day*60*60) + (hour*60) + minute;
     local boss = 
@@ -101,20 +103,17 @@ function Run()
             end
             bossTimeInMin = (bossDay*60*60) + (bossHour*60) + bossMin;
             if (bossTimeInMin - currentTimeInMin <= 10 and bossTimeInMin - currentTimeInMin >= 0) then
-                found = true
+                local macroText = "/way "..item.coorX..", "..item.coorY.." "..item.name.." ( Nov "..bossDay.." "..bossHourText..":"..bossMinText.." )";
+                button:SetAttribute("type", "macro");
+                button:SetAttribute("macrotext", macroText);
+                button:RegisterForClicks("LeftButtonUp");
+                button:SetText(item.name.." ( Nov "..bossDay.." "..bossHourText..":"..bossMinText.." )");
+                button:SetNormalFontObject("GameFontHighlight");
+                button:Show()
             end
             if (bossTimeInMin - currentTimeInMin <= 200 and bossTimeInMin - currentTimeInMin >= 0 and (item.name == "Skadi the Ruthless" or item.name == "Bronjahm")) then
                 print(item.name.." ( Nov "..bossDay.." "..bossHourText..":"..bossMinText.." )");
             end
-        end
-        if (found==true) then
-            local macroText = "/way "..item.coorX..", "..item.coorY.." "..item.name.." ( "..bossHourText..":"..bossMinText.." )";
-            button:SetAttribute("type", "macro");
-            button:SetAttribute("macrotext", macroText);
-            button:RegisterForClicks("LeftButtonUp");
-            button:SetText(item.name.." ( "..bossHourText..":"..bossMinText.." )");
-            button:SetNormalFontObject("GameFontHighlight");
-            button:Show()
         end
     end
 end
