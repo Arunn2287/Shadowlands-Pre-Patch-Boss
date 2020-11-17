@@ -77,39 +77,43 @@ function Run()
         local bossMin = item.min;
         local found = false;
 
+        local bossHourText = bossHour;
+        local bossMinText = bossMin;
         for i = 1, 100 do
-            bossMin = bossMin + timeSpanMin
-            bossHour = bossHour + timeSpanHour
+            bossMin = bossMin + timeSpanMin;
+            bossHour = bossHour + timeSpanHour;
 
             if bossMin >= 60 then
-                bossMin = bossMin - 60
-                bossHour = bossHour + 1
+                bossMin = bossMin - 60;
+                bossHour = bossHour + 1;
             end
             if bossHour >= 24 then
-                bossHour = bossHour - 24
-                bossDay = bossDay + 1
+                bossHour = bossHour - 24;
+                bossDay = bossDay + 1;
             end
-            bossTimeInMin = (bossDay*60*60) + (bossHour*60) + bossMin
-            if (bossTimeInMin - currentTimeInMin <= 10 and bossTimeInMin - currentTimeInMin >= 0) then
-                found = true
-                break
-            end
-        end
-        if (found==true) then
-            bossHourText = bossHour
-            bossMinText = bossMin
+            bossHourText = bossHour;
+            bossMinText = bossMin;
             if bossHour == 0 then
                 bossHourText = "00"
             end
             if bossMin == 0 then
                 bossMinText = "00"
             end
-            local macroText = "/way "..item.coorX..", "..item.coorY.." "..item.name.." ( "..bossHourText..":"..bossMinText.." )"
-            button:SetAttribute("type", "macro") 
+            bossTimeInMin = (bossDay*60*60) + (bossHour*60) + bossMin;
+            if (bossTimeInMin - currentTimeInMin <= 10 and bossTimeInMin - currentTimeInMin >= 0) then
+                found = true
+            end
+            if (bossTimeInMin - currentTimeInMin <= 200 and bossTimeInMin - currentTimeInMin >= 0 and (item.name == "Skadi the Ruthless" or item.name == "Bronjahm")) then
+                print(item.name.." ( Nov "..bossDay.." "..bossHourText..":"..bossMinText.." )");
+            end
+        end
+        if (found==true) then
+            local macroText = "/way "..item.coorX..", "..item.coorY.." "..item.name.." ( "..bossHourText..":"..bossMinText.." )";
+            button:SetAttribute("type", "macro");
             button:SetAttribute("macrotext", macroText);
             button:RegisterForClicks("LeftButtonUp");
-            button:SetText(item.name.." ( "..bossHourText..":"..bossMinText.." )")
-            button:SetNormalFontObject("GameFontHighlight")
+            button:SetText(item.name.." ( "..bossHourText..":"..bossMinText.." )");
+            button:SetNormalFontObject("GameFontHighlight");
             button:Show()
             break
         end
