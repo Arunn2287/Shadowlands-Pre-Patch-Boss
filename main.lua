@@ -115,7 +115,6 @@ function Run()
             button:SetText(item.name.." ( "..bossHourText..":"..bossMinText.." )");
             button:SetNormalFontObject("GameFontHighlight");
             button:Show()
-            break
         end
     end
 end
