@@ -1,0 +1,6 @@
+## Interface: 40300
+## Title: |cff1784d1Shadowlands Pre Patch Boss EU|r
+## Author: Cryptó
+## Version: 2.0.0
+
+main.lua

@@ -82,9 +82,6 @@ function Run()
         local bossHourText = bossHour;
         local bossMinText = bossMin;
         for i = 1, 100 do
-            bossMin = bossMin + timeSpanMin;
-            bossHour = bossHour + timeSpanHour;
-
             if bossMin >= 60 then
                 bossMin = bossMin - 60;
                 bossHour = bossHour + 1;
@@ -114,6 +111,8 @@ function Run()
             if (bossTimeInMin - currentTimeInMin <= 200 and bossTimeInMin - currentTimeInMin >= 0 and (item.name == "Skadi the Ruthless" or item.name == "Bronjahm")) then
                 print(item.name.." ( Nov "..bossDay.." "..bossHourText..":"..bossMinText.." )");
             end
+            bossMin = bossMin + timeSpanMin;
+            bossHour = bossHour + timeSpanHour;
         end
     end
 end
